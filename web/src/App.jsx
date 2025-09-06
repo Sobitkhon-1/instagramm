@@ -9,6 +9,7 @@ import { ThemeContext } from "./Contexts/ThemeContext"
 
 // Import pages
 import { Home } from "./Pages/Home/Home"
+import NotFound from "./Pages/NotFound"
 
 export function App() {
 
@@ -22,6 +23,8 @@ export function App() {
 				<ThemeContext.Provider value={ [ theme, setTheme ] }>
 					<Routes>
 						<Route path="/" element={ <Home /> } end />
+					    <Route path="*" element={<NotFound />} />
+
 					</Routes>
 				</ThemeContext.Provider>
 			</UserContext.Provider>
